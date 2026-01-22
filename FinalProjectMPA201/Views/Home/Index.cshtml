@@ -45,6 +45,15 @@
 					<li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
 					<li><a href="#team" class="smoothScroll">TEAM</a></li>
 					<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+					@if (User.Identity.IsAuthenticated)
+					{
+						<li><a asp-controller="Account" asp-action="Logout" class="smoothScroll">Logout</a></li>
+					}
+					else
+					{
+						<li><a asp-controller="Account" asp-action="Register" class="smoothScroll">Register</a></li>
+						<li><a asp-controller="Account" asp-action="Login" class="smoothScroll">Login</a></li>
+					}
 				</ul>
 			</div>
 		</div>
