@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model List<EmployeeGetVM>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -192,33 +193,20 @@
 					<h1 class="heading bold">OUR TEAM</h1>
 					<h2 class="subheading">CREATIVE TALENTS FROM WEST COAST</h2>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeIn" data-wow-delay="0.9s">
-					<div class="team-wrapper">
-						<img src="~/images/team1.jpg" class="img-responsive" alt="team img">
-						<div class="team-des">
-							<h4>Tracy</h4>
-							<h3>Designer</h3>
+				@foreach (var item in Model)
+				{
+					<div class="col-md-4 col-sm-4 col-xs-6 wow fadeIn" data-wow-delay="0.9s">
+						<div class="team-wrapper">
+							<img src="~/images/@item.ImagePath" class="img-responsive" alt="team img">
+							<div class="team-des">
+								<h4>@item.Name</h4>
+								<h3>@item.PositionName</h3>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeIn" data-wow-delay="1.3s">
-					<div class="team-wrapper">
-						<img src="~/images/team2.jpg" class="img-responsive" alt="team img">
-						<div class="team-des">
-							<h4>Linda</h4>
-							<h3>Manager</h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeIn" data-wow-delay="1.6s">
-					<div class="team-wrapper">
-						<img src="~/images/team3.jpg" class="img-responsive" alt="team img">
-						<div class="team-des">
-							<h4>Mary</h4>
-							<h3>Developer</h3>
-						</div>
-					</div>
-				</div>
+
+				}
+
 			</div>
 		</div>
 	</section>
@@ -234,6 +222,7 @@
 			</div>
 			<div class="row">
 				<div class="contact-info-box col-md-4 col-sm-4 col-xs-6 wow fadeInUp" data-wow-delay="0.6s">
+					<i class="fa fa-phone"></i>
 					<i class="fa fa-phone"></i>
 					<h3>060-040-0640</h3>
 				</div>

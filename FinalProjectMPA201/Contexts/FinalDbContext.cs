@@ -16,4 +16,6 @@ public class FinalDbContext : IdentityDbContext<AppUser>
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         base.OnModelCreating(builder);
     }
+    public DbSet<Employee> Employees { get; set; }
+    public DbSet<Position> Positions { get; set; }
 }

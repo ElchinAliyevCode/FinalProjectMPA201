@@ -1,17 +1,18 @@
 ﻿@model LoginVM
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
 <form method="post" asp-controller="Account" asp-action="Login">
-	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 	<!-- Email input -->
 	<div data-mdb-input-init class="form-outline mb-4">
 		<input asp-for="Email" type="email" id="form2Example1" class="form-control" />
-		<label asp-for="Email" class="form-label" for="form2Example1">Email address</label>
+		<label asp-for="Email" class="form-label" for="form2Example1"></label>
 		<span asp-validation-for="Email" class="text-danger"></span>
 	</div>
 
 	<!-- Password input -->
 	<div data-mdb-input-init class="form-outline mb-4">
 		<input asp-for="Password" type="password" id="form2Example2" class="form-control" />
-		<label asp-for="Password" class="form-label" for="form2Example2">Password</label>
+		<label asp-for="Password" class="form-label" for="form2Example2"></label>
 		<span asp-validation-for="Password" class="text-danger"></span>
 	</div>
 

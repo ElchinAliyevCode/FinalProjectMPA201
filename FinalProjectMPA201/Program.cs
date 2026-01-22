@@ -37,7 +37,7 @@ namespace FinalProjectMPA201
             var app = builder.Build();
 
             var scope = app.Services.CreateScope();
-            var initalizer = scope.ServiceProvider.GetService<DbInitalizer>();
+            var initalizer = scope.ServiceProvider.GetRequiredService<DbInitalizer>();
 
             await initalizer.CreateRolesAndAdmin();
 

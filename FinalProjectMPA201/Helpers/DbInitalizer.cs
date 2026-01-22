@@ -36,7 +36,8 @@ public class DbInitalizer
             Email = _admin.Email
         };
 
-        var result = await _userManager.CreateAsync(admin, _admin.Password);
+        await _userManager.CreateAsync(admin, _admin.Password);
+        await _userManager.AddToRoleAsync(admin, "Admin");
     }
 
     private async Task CreateRolesAsync()

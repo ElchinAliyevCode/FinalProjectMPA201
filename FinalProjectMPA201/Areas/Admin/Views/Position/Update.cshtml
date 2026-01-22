@@ -1,0 +1,14 @@
+﻿@model PositionUpdateVM
+<div class="container">
+	<div class="row">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<form method="post" asp-area="Admin" asp-controller="Position" asp-action="Update">
+			<div class="form-group">
+				<label asp-for="Name">Name</label>
+				<input asp-for="Name" placeholder="Enter name">
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
